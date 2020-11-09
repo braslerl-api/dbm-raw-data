@@ -1,0 +1,75 @@
+{
+  "name": "ship",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "FIdpr",
+  "actions": [
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "2",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "You have to mention 2 member",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "2",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "1",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "2",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "2",
+      "name": "Store Command Params"
+    },
+    {
+      "member": "2",
+      "varName": "1",
+      "info": "16",
+      "storage": "1",
+      "varName2": "url1",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "2",
+      "info": "16",
+      "storage": "1",
+      "varName2": "url2",
+      "name": "Store Member Info"
+    },
+    {
+      "url": "https://braslerl-api.herokuapp.com//ship?url1=${tempVars(\"url1\")}&url2=${tempVars(\"url2\")}",
+      "storage": "1",
+      "varName": "img",
+      "name": "Create Image"
+    },
+    {
+      "storage": "1",
+      "varName": "img",
+      "channel": "0",
+      "varName2": "",
+      "message": "",
+      "storage2": "0",
+      "varName3": "",
+      "name": "Send Image"
+    }
+  ]
+}
