@@ -6,4 +6,10 @@
 ![](img/trash.jpg)
 
 
-[Rawdata here](raw/trash.txt)
+[Rawdata for trash here](raw/trash.txt)
+
+## Glitch effect:
+
+![](img/glitch.gif)
+
+[Rawdata for trash here](raw/trash.txt)
