@@ -4,3 +4,4 @@
 ## Trash:
 
 [Rawdata here](raw/trash.txt)
+![](img/trash.jpg)
