@@ -1,0 +1,53 @@
+{
+  "name": "trash",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "kTWnR",
+  "actions": [
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Please mention a member",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "name",
+      "name": "Store Member Info"
+    },
+    {
+      "url": "https://braslerl-api.herokuapp.com/trash?name=${tempVars(\"name\")}",
+      "storage": "1",
+      "varName": "img",
+      "name": "Create Image"
+    },
+    {
+      "storage": "1",
+      "varName": "img",
+      "channel": "0",
+      "varName2": "",
+      "message": "",
+      "storage2": "0",
+      "varName3": "",
+      "name": "Send Image"
+    }
+  ]
+}
