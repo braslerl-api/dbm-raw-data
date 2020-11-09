@@ -1,5 +1,8 @@
 
-# dbm-raw-data
+# Raw Data for DBM
+When you use the raw-data the bot will send an image like this into the channel.
+Look at the files for more info, it's not complex because it is powered by my api which generates all.
+It is written in Python.
 
 ## Trash:
 
