@@ -1,0 +1,91 @@
+{
+  "name": "level",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "level",
+      "defaultVal": "1",
+      "storage": "1",
+      "varName2": "myLevel",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "exp",
+      "defaultVal": "1",
+      "storage": "1",
+      "varName2": "xp",
+      "name": "Store Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"xp\")}\n${tempVars(\"myLevel\")}",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "need_xp",
+      "changeType": "0",
+      "value": "${tempVars(\"myLevel\")*5}",
+      "name": "Control Variable"
+    },
+    {
+      "FirstNumber": "100",
+      "info": "3",
+      "SecondNumber": "${tempVars(\"need_xp\")}",
+      "storage": "1",
+      "varName": "produkt",
+      "name": "Math Operation Plus"
+    },
+    {
+      "FirstNumber": "${tempVars(\"need_xp\")}",
+      "info": "3",
+      "SecondNumber": "${tempVars(\"xp\")}",
+      "storage": "1",
+      "varName": "ergebniss",
+      "name": "Math Operation Plus"
+    },
+    {
+      "FirstNumber": "${tempVars(\"produkt\")}",
+      "info": "2",
+      "SecondNumber": "${tempVars(\"xp\")}",
+      "storage": "1",
+      "varName": "ergebniss",
+      "name": "Math Operation Plus"
+    },
+    {
+      "FirstNumber": "${tempVars(\"ergebniss\")}",
+      "info": "4",
+      "SecondNumber": "",
+      "storage": "1",
+      "varName": "procent",
+      "name": "Math Operation Plus"
+    },
+    {
+      "url": "https://braslerl-api.herokuapp.com/discord/level/blue?number=${tempVars(\"procent\")}&level=${tempVars(\"myLevel\")}",
+      "storage": "1",
+      "varName": "img",
+      "name": "Create Image"
+    },
+    {
+      "storage": "1",
+      "varName": "img",
+      "channel": "0",
+      "varName2": "channel",
+      "message": "",
+      "storage2": "0",
+      "varName3": "",
+      "name": "Send Image"
+    }
+  ],
+  "_id": "dYyQW"
+}
