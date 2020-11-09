@@ -1,0 +1,69 @@
+{
+  "name": "glitch",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "fyusF",
+  "actions": [
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "4",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "member": "1",
+      "varName": "1",
+      "info": "16",
+      "storage": "1",
+      "varName2": "url",
+      "name": "Store Member Info"
+    },
+    {
+      "url": "https://braslerl-api.herokuapp.com/glitch?url=${tempVars(\"url\")}",
+      "storage": "1",
+      "varName": "img",
+      "name": "Create Image"
+    },
+    {
+      "storage": "1",
+      "varName": "img",
+      "channel": "0",
+      "varName2": "",
+      "message": "",
+      "storage2": "0",
+      "varName3": "",
+      "name": "Send Image"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "0",
+      "varName": "1",
+      "info": "16",
+      "storage": "1",
+      "varName2": "url",
+      "name": "Store Member Info"
+    },
+    {
+      "url": "https://braslerl-api.herokuapp.com/glitch?url=${tempVars(\"url\")}",
+      "storage": "1",
+      "varName": "img",
+      "name": "Create Image"
+    },
+    {
+      "storage": "1",
+      "varName": "img",
+      "channel": "0",
+      "varName2": "",
+      "message": "",
+      "storage2": "0",
+      "varName3": "",
+      "name": "Send Image"
+    }
+  ]
+}
