@@ -5,9 +5,6 @@ When you use the raw-data the bot will send an image like this into the channel.
 Look at the files for more info, it's not complex because it is powered by my api which generates all.
 It is written in Python.
 
-
-<br>
-
 # Welcome image:
 
 Create an event (you should know how to) which send a image to an channel if someone joins.
@@ -28,6 +25,10 @@ Create an image like this:
 
 **Result:**
 ![enter image description here](https://braslerl-api.herokuapp.com/discord/welcome/blue?memberavatar=https://cdn.discordapp.com/avatars/332229703177994251/cf731d36720430ce4fff59962f8ef94f.png?size=4096&servername=Xenics%20Server&membername=Xenic)
+
+<br>
+
+<br>
 
 
 ## Trash:
