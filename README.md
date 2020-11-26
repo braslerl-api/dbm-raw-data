@@ -65,3 +65,6 @@ In [level](raw/level.txt) you can replace a part from the url:
 replace `blue` with `discord`, `green`, `red` or  `pink` to get another theme
 Themes you can see here:
 ![enter image description here](https://braslerl-api.herokuapp.com/discord/level/themes)
+
+# Contact:
+Contact me [here](https://braslerl-api.herokuapp.com/contact)
