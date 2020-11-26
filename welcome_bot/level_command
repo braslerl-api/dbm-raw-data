@@ -93,7 +93,7 @@
       "name": "Check if File Exists"
     },
     {
-      "url": "${globalVars(\"link\")}/discord/level/${tempVars(\"theme\")}?number=0&level=0",
+      "url": "https://braslerl-api.herokuapp.com//discord/level/${tempVars(\"theme\")}?number=0&level=0",
       "storage": "1",
       "varName": "img",
       "name": "Create Image"
@@ -179,7 +179,7 @@
       "name": "Math Operation Plus"
     },
     {
-      "url": "${globalVars(\"link\")}/discord/level/${tempVars(\"theme\")}?number=${tempVars(\"procent\")}&level=${tempVars(\"myLevel\")}",
+      "url": "https://braslerl-api.herokuapp.com//discord/level/${tempVars(\"theme\")}?number=${tempVars(\"procent\")}&level=${tempVars(\"myLevel\")}",
       "storage": "1",
       "varName": "img",
       "name": "Create Image"
