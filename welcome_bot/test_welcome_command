@@ -1,0 +1,82 @@
+
+{
+  "name": "test",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "mWlwA",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "server_id",
+      "name": "Store Server Info"
+    },
+    {
+      "filename": "./server/${tempVars(\"server_id\")}/theme_setting",
+      "storage": "1",
+      "varName2": "1",
+      "name": "Read File"
+    },
+    {
+      "storage": "1",
+      "varName": "1",
+      "conversion": "2",
+      "storage2": "1",
+      "varName2": "theme",
+      "name": "Convert Variable"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "server_name",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "av_url",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "name",
+      "name": "Store Member Info"
+    },
+    {
+      "url": "https://braslerl-api.herokuapp.com//discord/welcome/${tempVars(\"theme\")}?memberavatar=${tempVars(\"av_url\")}&servername=${tempVars(\"server_name\")}&membername=${tempVars(\"name\")}",
+      "storage": "1",
+      "varName": "theme_img",
+      "name": "Create Image"
+    },
+    {
+      "storage": "1",
+      "varName": "theme_img",
+      "channel": "0",
+      "varName2": "all_welcome_channel",
+      "message": "",
+      "storage2": "0",
+      "varName3": "",
+      "name": "Send Image"
+    },
+    {
+      "storage": "1",
+      "varName": "theme_img",
+      "channel": "7",
+      "varName2": "all_welcome_channel",
+      "message": "",
+      "storage2": "0",
+      "varName3": "",
+      "name": "Send Image"
+    }
+  ],
+  "comType": "0"
+}
