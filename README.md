@@ -23,6 +23,8 @@ Create an image like this:
 
 **Result:**
 ![enter image description here](https://braslerl-api.herokuapp.com/discord/welcome/blue?memberavatar=https://cdn.discordapp.com/avatars/332229703177994251/cf731d36720430ce4fff59962f8ef94f.png?size=4096&servername=Xenics%20Server&membername=Xenic)
+`https://braslerl-api.herokuapp.com/discord/welcome/blue?memberavatar=https://cdn.discordapp.com/avatars/332229703177994251/cf731d36720430ce4fff59962f8ef94f.png?size=4096&servername=Xenics%20Server&membername=Xenic`
+
 
 <br>
 
