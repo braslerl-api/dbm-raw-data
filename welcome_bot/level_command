@@ -1,0 +1,209 @@
+{
+  "name": "level",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "message": "0",
+      "varName": "msg",
+      "info": "19",
+      "storage": "1",
+      "varName2": "msg_server",
+      "name": "Store Message Info"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "2",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Parameters"
+    },
+    {
+      "member": "0",
+      "varName": "msg_author",
+      "info": "1",
+      "storage": "1",
+      "varName2": "member_id",
+      "name": "Store Member Info"
+    },
+    {
+      "count": "1",
+      "name": "Skip Actions"
+    },
+    {
+      "member": "1",
+      "varName": "msg_author",
+      "info": "1",
+      "storage": "1",
+      "varName2": "member_id",
+      "name": "Store Member Info"
+    },
+    {
+      "server": "0",
+      "varName": "msg_server",
+      "info": "1",
+      "storage": "1",
+      "varName2": "server_id",
+      "name": "Store Server Info"
+    },
+    {
+      "filename": "./server/${tempVars(\"server_id\")}/level_setting",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check if File Exists"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Level system is disabled\nUse `$settings` to enable it (you need admin rights)",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "filename": "./server/${tempVars(\"server_id\")}/theme_setting",
+      "storage": "1",
+      "varName2": "theme_file",
+      "name": "Read File"
+    },
+    {
+      "storage": "1",
+      "varName": "theme_file",
+      "conversion": "2",
+      "storage2": "1",
+      "varName2": "theme",
+      "name": "Convert Variable"
+    },
+    {
+      "filename": "./server/${tempVars(\"server_id\")}/member_level/${tempVars(\"member_id\")}_level",
+      "iftrue": "3",
+      "iftrueVal": "3",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check if File Exists"
+    },
+    {
+      "url": "${globalVars(\"link\")}/discord/level/${tempVars(\"theme\")}?number=0&level=0",
+      "storage": "1",
+      "varName": "img",
+      "name": "Create Image"
+    },
+    {
+      "storage": "1",
+      "varName": "img",
+      "channel": "0",
+      "varName2": "channel",
+      "message": "${mentionedUser}",
+      "storage2": "0",
+      "varName3": "",
+      "name": "Send Image"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "filename": "./server/${tempVars(\"server_id\")}/member_level/${tempVars(\"member_id\")}_level",
+      "storage": "1",
+      "varName2": "level_file",
+      "name": "Read File"
+    },
+    {
+      "filename": "./server/${tempVars(\"server_id\")}/member_level/${tempVars(\"member_id\")}_xp",
+      "storage": "1",
+      "varName2": "xp_file",
+      "name": "Read File"
+    },
+    {
+      "storage": "1",
+      "varName": "level_file",
+      "conversion": "2",
+      "storage2": "1",
+      "varName2": "myLevel",
+      "name": "Convert Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "xp_file",
+      "conversion": "2",
+      "storage2": "1",
+      "varName2": "xp",
+      "name": "Convert Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "need_xp",
+      "changeType": "0",
+      "value": "${tempVars(\"myLevel\")*5}",
+      "name": "Control Variable"
+    },
+    {
+      "FirstNumber": "100",
+      "info": "3",
+      "SecondNumber": "${tempVars(\"need_xp\")}",
+      "storage": "1",
+      "varName": "produkt",
+      "name": "Math Operation Plus"
+    },
+    {
+      "FirstNumber": "${tempVars(\"need_xp\")}",
+      "info": "3",
+      "SecondNumber": "${tempVars(\"xp\")}",
+      "storage": "1",
+      "varName": "ergebniss",
+      "name": "Math Operation Plus"
+    },
+    {
+      "FirstNumber": "${tempVars(\"produkt\")}",
+      "info": "2",
+      "SecondNumber": "${tempVars(\"xp\")}",
+      "storage": "1",
+      "varName": "ergebniss",
+      "name": "Math Operation Plus"
+    },
+    {
+      "FirstNumber": "${tempVars(\"ergebniss\")}",
+      "info": "4",
+      "SecondNumber": "",
+      "storage": "1",
+      "varName": "procent",
+      "name": "Math Operation Plus"
+    },
+    {
+      "url": "${globalVars(\"link\")}/discord/level/${tempVars(\"theme\")}?number=${tempVars(\"procent\")}&level=${tempVars(\"myLevel\")}",
+      "storage": "1",
+      "varName": "img",
+      "name": "Create Image"
+    },
+    {
+      "storage": "1",
+      "varName": "img",
+      "channel": "0",
+      "varName2": "channel",
+      "message": "${member}",
+      "storage2": "0",
+      "varName3": "",
+      "name": "Send Image"
+    },
+    {
+      "storage": "1",
+      "varName": "img",
+      "channel": "7",
+      "varName2": "all_level_channel",
+      "message": "${member}",
+      "storage2": "0",
+      "varName3": "",
+      "name": "Send Image"
+    }
+  ],
+  "_id": "dYyQW"
+}
