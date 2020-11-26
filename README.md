@@ -2,7 +2,7 @@
 
 # Raw Data for DBM
 When you use the raw-data the bot will send an image this into the channel.
-Look at the files for more info, it's not complex because it is powered by my api which generates all.
+Look at the raws, they aren't  complex because it is powered by my api which generates near to all.
 # Welcome image:
 
 Create an event (you should know how to) which send a image to an channel if someone joins.
