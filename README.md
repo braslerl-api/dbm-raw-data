@@ -22,8 +22,8 @@ Create an image like this:
  You did it, now a image will be sent when a new member joins (if you did nothing wrong)
 
 **Result:**
-![enter image description here](https://braslerl-api.herokuapp.com/discord/welcome/blue?memberavatar=https://cdn.discordapp.com/embed/avatars/2.png?size=4096&servername=Xenics%20Server&membername=Xenic)
-`https://braslerl-api.herokuapp.com/discord/welcome/blue?memberavatar=https://cdn.discordapp.com/embed/avatars/2.png&servername=Xenics%20Server&membername=Xenic`
+![](https://braslerl-api.herokuapp.com/discord/welcome/blue?memberavatar=https://cdn.discordapp.com/embed/avatars/2.png?size=4096&servername=Xenics%20Server&membername=Xenic)
+`https://braslerl-api.herokuapp.com/discord/welcome/blue?memberavatar=https://cdn.discordapp.com/embed/avatars/2.png?size=4096&servername=Xenics%20Server&membername=Xenic`
 
 
 <br>
